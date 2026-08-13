@@ -1,21 +1,21 @@
+ import Link from "next/link";
 
-function Navbar(){
-    return(
-        <>
-         <nav className="w-full flex items-center justify-between px-8 py-4 bg-zinc-50 dark:bg-black border-b border-zinc-200 dark:border-zinc-800">
-      {/* Logo / Brand - left */}
-      <Link href="/" className="text-lg font-bold tracking-wide">
+ function Navbar() {
+  return (
+    <nav className="w-full flex items-center justify-between px-6 md:px-12 py-6">
+      <Link href="/" className="text-lg md:text-xl font-bold tracking-wide text-white">
         Enlightenment Odyssey
       </Link>
 
-      {/* Links - right */}
-      <div className="flex items-center gap-6 text-sm font-medium">
-        <Link href="/">Home</Link>
-        <Link href="/register">Payment</Link>
+      <div className="flex items-center gap-6 md:gap-8 text-sm font-medium text-zinc-200">
+        <Link href="/" className="hover:text-white transition-colors">
+          Home
+        </Link>
+        <Link href="/register" className="hover:text-white transition-colors">
+          Payment
+        </Link>
       </div>
     </nav>
-        </>
-    )
+  );
 }
-
-export default Navbar;
+export default Navbar 
